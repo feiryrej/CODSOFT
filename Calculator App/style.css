@@ -1,0 +1,88 @@
+/* Reset default margin, padding, and box-sizing for all elements */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles for the entire page */
+body {
+  background: linear-gradient(45deg, #fccedd, #e588b2);
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling for the calculator container */
+.calculator {
+  background-color: #411429;
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgba(66, 66, 66, 0.4);
+  left: 50%;
+  padding: 50px 30px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+}
+
+/* Styling for the display area */
+.display {
+  background-color: #d3b0d3;
+  border-radius: 2px;
+  width: 100%;
+}
+
+/* Styling for the input field inside the display area */
+.display input {
+  background-color: transparent;
+  border: none;
+  color: #313034;
+  font-size: 35px;
+  padding: 15px 10px;
+  text-align: right;
+  width: 100%;
+}
+
+/* Styling for the input field's placeholder text */
+.display input::placeholder {
+  color: #313034;
+}
+
+/* Styling for the calculator buttons container */
+.buttons {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 40px;
+}
+
+/* Styling for the calculator buttons */
+.buttons input[type="button"] {
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 17px;
+  box-shadow: 0 0 10px rgba(49, 7, 28, 0.8); /* Pink glowing border */
+}
+
+/* Hover effect for calculator buttons */
+.buttons input[type="button"]:hover {
+  box-shadow: 0 8px 25px #2e000f;
+}
+
+/* Styling for the equals button */
+input[type="button"]#equal {
+  background-color: #cf7695;
+  grid-row: span 2;
+}
+
+/* Styling for the "0" button that spans two columns */
+input[type="button"][value="0"] {
+  grid-column: span 2;
+}
